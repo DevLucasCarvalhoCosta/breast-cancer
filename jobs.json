@@ -1,0 +1,150 @@
+{
+  "total_count": 2,
+  "jobs": [
+    {
+      "id": 64931873166,
+      "run_id": 22425261806,
+      "workflow_name": "Deploy to Google Cloud",
+      "head_branch": "main",
+      "run_url": "https://api.github.com/repos/DevLucasCarvalhoCosta/breast-cancer/actions/runs/22425261806",
+      "run_attempt": 1,
+      "node_id": "CR_kwDORZDpiM8AAAAPHj3Bjg",
+      "head_sha": "6adfd3b0725e090455a08743662c281756487bb7",
+      "url": "https://api.github.com/repos/DevLucasCarvalhoCosta/breast-cancer/actions/jobs/64931873166",
+      "html_url": "https://github.com/DevLucasCarvalhoCosta/breast-cancer/actions/runs/22425261806/job/64931873166",
+      "status": "completed",
+      "conclusion": "failure",
+      "created_at": "2026-02-26T02:30:34Z",
+      "started_at": "2026-02-26T02:30:36Z",
+      "completed_at": "2026-02-26T02:30:41Z",
+      "name": "build-and-deploy-backend",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-02-26T02:30:37Z",
+          "completed_at": "2026-02-26T02:30:38Z"
+        },
+        {
+          "name": "Checkout Repo",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-02-26T02:30:38Z",
+          "completed_at": "2026-02-26T02:30:39Z"
+        },
+        {
+          "name": "Auth in GCP",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 3,
+          "started_at": "2026-02-26T02:30:39Z",
+          "completed_at": "2026-02-26T02:30:39Z"
+        },
+        {
+          "name": "Set up Cloud SDK",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 4,
+          "started_at": "2026-02-26T02:30:39Z",
+          "completed_at": "2026-02-26T02:30:39Z"
+        },
+        {
+          "name": "Configure Docker",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 5,
+          "started_at": "2026-02-26T02:30:39Z",
+          "completed_at": "2026-02-26T02:30:39Z"
+        },
+        {
+          "name": "Build Backend Image",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 6,
+          "started_at": "2026-02-26T02:30:39Z",
+          "completed_at": "2026-02-26T02:30:39Z"
+        },
+        {
+          "name": "Push Backend Image",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 7,
+          "started_at": "2026-02-26T02:30:39Z",
+          "completed_at": "2026-02-26T02:30:39Z"
+        },
+        {
+          "name": "Deploy Backend to Cloud Run",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 8,
+          "started_at": "2026-02-26T02:30:39Z",
+          "completed_at": "2026-02-26T02:30:39Z"
+        },
+        {
+          "name": "Post Auth in GCP",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-02-26T02:30:39Z",
+          "completed_at": "2026-02-26T02:30:39Z"
+        },
+        {
+          "name": "Post Checkout Repo",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-02-26T02:30:39Z",
+          "completed_at": "2026-02-26T02:30:39Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-02-26T02:30:39Z",
+          "completed_at": "2026-02-26T02:30:39Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/DevLucasCarvalhoCosta/breast-cancer/check-runs/64931873166",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000000242,
+      "runner_name": "GitHub Actions 1000000242",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 64931881760,
+      "run_id": 22425261806,
+      "workflow_name": "Deploy to Google Cloud",
+      "head_branch": "main",
+      "run_url": "https://api.github.com/repos/DevLucasCarvalhoCosta/breast-cancer/actions/runs/22425261806",
+      "run_attempt": 1,
+      "node_id": "CR_kwDORZDpiM8AAAAPHj3jIA",
+      "head_sha": "6adfd3b0725e090455a08743662c281756487bb7",
+      "url": "https://api.github.com/repos/DevLucasCarvalhoCosta/breast-cancer/actions/jobs/64931881760",
+      "html_url": "https://github.com/DevLucasCarvalhoCosta/breast-cancer/actions/runs/22425261806/job/64931881760",
+      "status": "completed",
+      "conclusion": "skipped",
+      "created_at": "2026-02-26T02:30:42Z",
+      "started_at": "2026-02-26T02:30:42Z",
+      "completed_at": "2026-02-26T02:30:41Z",
+      "name": "build-and-deploy-frontend",
+      "steps": [
+
+      ],
+      "check_run_url": "https://api.github.com/repos/DevLucasCarvalhoCosta/breast-cancer/check-runs/64931881760",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": null,
+      "runner_name": null,
+      "runner_group_id": null,
+      "runner_group_name": null
+    }
+  ]
+}
