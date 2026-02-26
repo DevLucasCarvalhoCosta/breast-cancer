@@ -1,0 +1,47 @@
+services:
+  # ──────────────────────────────────────────────
+  # PostgreSQL — Banco de dados relacional
+  # ──────────────────────────────────────────────
+  db:
+    image: postgres:16-alpine
+    container_name: cancermama_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: cancermama
+      POSTGRES_PASSWORD: cancermama_2026
+      POSTGRES_DB: breast_cancer
+    ports:
+      - "5434:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U cancermama -d breast_cancer"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # ──────────────────────────────────────────────
+  # Backend — FastAPI + scikit-learn
+  # ──────────────────────────────────────────────
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: cancermama_api
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: postgresql://cancermama:cancermama_2026@db:5432/breast_cancer
+      ENVIRONMENT: development
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+      - ./data:/app/data
+    depends_on:
+      db:
+        condition: service_healthy
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+
+volumes:
+  pgdata:
+    driver: local
