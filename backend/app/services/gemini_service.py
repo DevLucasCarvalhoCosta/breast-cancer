@@ -1,12 +1,12 @@
 import json
-from google import genai
-from google.genai import types
+import google.generativeai as genai
 
 from app.config import get_settings
 
 settings = get_settings()
 
-client = genai.Client(api_key=settings.GEMINI_API_KEY)
+if settings.GEMINI_API_KEY:
+    genai.configure(api_key=settings.GEMINI_API_KEY)
 
 def generate_medical_report(features_data: dict, prediction: int, probability: float) -> str:
     """
@@ -36,10 +36,8 @@ def generate_medical_report(features_data: dict, prediction: int, probability: f
     """
 
     try:
-        response = client.models.generate_content(
-            model='gemini-2.5-flash',
-            contents=prompt,
-        )
+        model = genai.GenerativeModel('gemini-2.5-flash')
+        response = model.generate_content(prompt)
         return response.text
     except Exception as e:
         return f"Erro ao gerar o laudo com Gemini: {e}"
@@ -63,10 +61,8 @@ def generate_eda_storytelling(correlation_data: dict) -> str:
     """
 
     try:
-        response = client.models.generate_content(
-            model='gemini-2.5-flash',
-            contents=prompt,
-        )
+        model = genai.GenerativeModel('gemini-2.5-flash')
+        response = model.generate_content(prompt)
         return response.text
     except Exception as e:
         return f"Erro ao gerar storytelling com Gemini: {e}"
