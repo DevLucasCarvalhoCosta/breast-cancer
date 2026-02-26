@@ -1,4 +1,3 @@
-import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { LayoutDashboard, Database, BarChart2, CheckSquare, Stethoscope } from 'lucide-react';
 

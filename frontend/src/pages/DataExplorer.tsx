@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { getSamples, getFeatures } from '../services/api';
-import { SampleWithFeatures, FeatureDefinitionResponse } from '../types';
+import type { SampleWithFeatures, FeatureDefinitionResponse } from '../types';
 import { Loader2, Search } from 'lucide-react';
 
 const DataExplorer = () => {

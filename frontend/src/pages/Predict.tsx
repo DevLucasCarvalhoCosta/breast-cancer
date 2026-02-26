@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { getMedicalReport } from '../services/api';
 import { Stethoscope, Loader2, FileText, AlertTriangle } from 'lucide-react';
 
