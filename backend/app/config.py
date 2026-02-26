@@ -8,7 +8,7 @@ class Settings(BaseSettings):
     APP_VERSION: str = "1.0.0"
     ENVIRONMENT: str = "development"
     DEBUG: bool = True
-    DATA_CSV_PATH: str = "../data/data.csv"
+    DATA_CSV_PATH: str = "data/data.csv"
     TEST_SIZE: float = 0.25
     RANDOM_STATE: int = 42
     SCALER_TYPE: str = "StandardScaler"
