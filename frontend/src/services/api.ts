@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:8000/api',
+  baseURL: import.meta.env.VITE_API_URL || 'https://cancermama-backend-868844927948.southamerica-east1.run.app/api',
 });
 
 export const getDatasetStats = () => api.get('/data/stats');
